@@ -31,7 +31,6 @@ export default function UpdateProfile() {
     resolver: zodResolver(updateProfileSchema),
   });
   const session = useSession();
-  console.log(session);
 
   async function handleUpdateProfile(data: UpdateProfileData) {
     await api.put("/users/profile", {
